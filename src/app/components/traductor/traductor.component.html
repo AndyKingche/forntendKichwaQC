@@ -1,0 +1,27 @@
+
+<div class="content">
+    <a type="button" class="btn btn-success" routerLink="/translate-form">Ingresar un nueva traduccion</a>
+</div>
+<div class="content" >
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Palabra en Español</th>
+            <th scope="col">Palabra Kichwa</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Actualizar</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let translate of traductor">
+            <tr>
+                <!-- <th scope="row">{{translate.id_traductor}}</th> -->
+                <td>{{translate.palabraespanol}}</td>
+                <td>{{translate.palabra_id}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteTraductor(translate.id_traductor)">Eliminar</button></td>
+                <td><button type="button" class="btn btn-dark" [routerLink]="['/translate-form-edit/',translate.id_traductor]"> Actualizar</button></td>
+ 
+            </tr>
+          </tbody>
+      </table> 
+</div>

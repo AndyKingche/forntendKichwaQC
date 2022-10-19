@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content">
+        <div class="container-fluid">
+            <form>
+                <div class="form-group">
+                  <label for="nombre">Palabra en español</label>
+                  <input type="text" class="form-control"  [(ngModel)]="traductor.palabraespanol" name="palabraespanol">
+                </div>
+               
+                <div class="form-group">
+                    <label for="habitantes">Palabra id</label>
+                    <input type="text" class="form-control" [(ngModel)]="traductor.palabra_id"  name="palabra_id">
+                  
+                </div>
+                <button  class="btn btn-primary" (click)="edit ? updateTraductor() : createTraductor()">Agregar palabra</button>
+                
+                <button type="button" class="btn btn-info" routerLink="/translate">Regresar</button>
+              </form>
+        </div>
+
+    </div>
+    
+</div>
+
